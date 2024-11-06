@@ -3,6 +3,7 @@ package com.incb.store_content_manager.controller;
 import com.incb.store_content_manager.model.Cart;
 import com.incb.store_content_manager.service.CartFetchService;
 import com.incb.store_content_manager.service.CartUpdateService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cart")
+@Tag(name = "Cart")
 public class StoreContentCartController {
 
     private CartFetchService cartFetchService;
