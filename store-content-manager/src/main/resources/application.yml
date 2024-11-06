@@ -24,21 +24,12 @@ db:
   source:
     type: ${DB_SOURCE_TYPE}
 
-
 fake-store:
   uri: ${STORE_URL}
 
 logging:
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
-
-#springfox:
-#  documentation:
-#    swagger:
-#      v2:
-#        path: /v2/api-docs
-#  ui:
-#    base-url: /store/management/swagger-ui/
 
 server:
   port: 8090
