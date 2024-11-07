@@ -5,6 +5,12 @@ spring:
     user:
       name: user
       password: password
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${CLIENT_ID:Ov23lituOVBChp3hPwZH}
+            client-secret: ${CLIENT_SECRET:08d99e5d8c4c27cd1500cbf36308603cc6fe753a}
   data:
     mongodb:
       host: ${MONGO_HOST:localhost}
