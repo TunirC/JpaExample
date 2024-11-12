@@ -6,7 +6,6 @@ import com.incb.store_content_manager.client.StoreProductRequestClient;
 import com.incb.store_content_manager.exception.EmptyCartException;
 import com.incb.store_content_manager.model.Cart;
 import com.incb.store_content_manager.model.CartEntity;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

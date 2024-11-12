@@ -51,4 +51,10 @@ public class StoreContentManagerController {
         return new ResponseEntity<>(products, HttpStatus.CREATED);
     }
 
+    @PostMapping("/test/save")
+    public ResponseEntity<Product<?>> saveProductInSql(@RequestBody Product<?> product) {
+        productUpdateService.saveProduct(product);
+        return new ResponseEntity<>(product, HttpStatus.CREATED);
+    }
+
 }

@@ -14,27 +14,25 @@ public class ServerSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        /*
+
         return httpSecurity
                 .authorizeHttpRequests((authenticator) -> authenticator.anyRequest().permitAll())
                 .csrf(AbstractHttpConfigurer::disable)
-                .oauth2ResourceServer(authServer -> authServer.jwt(Customizer.withDefaults()))
-                .build();
-        */
-
-        return httpSecurity
-                .authorizeHttpRequests(
-                        authenticator -> authenticator
-                        .requestMatchers("/")
-                        .permitAll()
-                        .anyRequest()
-                        .authenticated()
-                )
-                .oauth2Login(Customizer.withDefaults())
-                .formLogin(Customizer.withDefaults())
-                .csrf(AbstractHttpConfigurer::disable)
                 .build();
 
+
+//        return httpSecurity
+//                .authorizeHttpRequests(
+//                        authenticator -> authenticator
+//                        .requestMatchers("/")
+//                        .permitAll()
+//                        .anyRequest()
+//                        .authenticated()
+//                )
+//                .oauth2Login(oauth -> oauth.defaultSuccessUrl("/",true))
+//                .formLogin(Customizer.withDefaults())
+//                .csrf(AbstractHttpConfigurer::disable)
+//                .build();
     }
 
 }

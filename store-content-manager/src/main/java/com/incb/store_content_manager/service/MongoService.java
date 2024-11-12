@@ -12,6 +12,8 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.Queue;
 
 @Service
 @Slf4j
@@ -41,6 +43,17 @@ public class MongoService {
         }
     }
 
+    public ProductEntity<?> getProduct(Integer id) {
+        try {
+            return mongoTemplate.findOne(
+                   Query.query(Criteria.where("id").is(id)),
+                   ProductEntity.class
+            );
+        } catch (Exception e) {
+            throw new DBProcessException("Failed to fetch product from db, {}", e);
+        }
+    }
+
     public boolean isProductPresent(Product<?> product) {
         try {
             Query isPresentQuery = Query.query(Criteria.where("id").is(product.getId()));
@@ -58,6 +71,7 @@ public class MongoService {
             throw new DBProcessException("cart not present in DB");
         }
     }
+
 
 
 
