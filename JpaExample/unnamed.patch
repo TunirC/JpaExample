@@ -1,0 +1,46 @@
+Index: final-review/src/multithreading/SynchronizationUsingLocks/ReEntrantExample.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/final-review/src/multithreading/SynchronizationUsingLocks/ReEntrantExample.java b/final-review/src/multithreading/SynchronizationUsingLocks/ReEntrantExample.java
+new file mode 100644
+--- /dev/null	(date 1735905321819)
++++ b/final-review/src/multithreading/SynchronizationUsingLocks/ReEntrantExample.java	(date 1735905321819)
+@@ -0,0 +1,4 @@
++package multithreading.SynchronizationUsingLocks;
++
++public class ReEntrantExample {
++}
+Index: store-content-manager/src/main/java/com/incb/store_content_manager/kafka/publisher/KafkaPublisher.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/store-content-manager/src/main/java/com/incb/store_content_manager/kafka/publisher/KafkaPublisher.java b/store-content-manager/src/main/java/com/incb/store_content_manager/kafka/publisher/KafkaPublisher.java
+--- a/store-content-manager/src/main/java/com/incb/store_content_manager/kafka/publisher/KafkaPublisher.java	(revision 74c522faff9a3f63c6a0bd437de08c2227774063)
++++ b/store-content-manager/src/main/java/com/incb/store_content_manager/kafka/publisher/KafkaPublisher.java	(date 1735905333990)
+@@ -1,3 +1,9 @@
++<<<<<<< Updated upstream
++package com.incb.store_content_manager.kafka.publisher;
++
++public class KafkaPublisher {
++}
++=======
+ package com.incb.store_content_manager.kafka.publisher;
+ 
+ import lombok.extern.slf4j.Slf4j;
+@@ -31,3 +37,4 @@
+         });
+     }
+ }
++>>>>>>> Stashed changes
+diff --git a/final-review/src/Multithreading/SynchronizationUsingLocks/Runner.java b/final-review/src/multithreading/SynchronizationOnObject/Runner.java
+rename from final-review/src/Multithreading/SynchronizationUsingLocks/Runner.java
+rename to final-review/src/multithreading/SynchronizationOnObject/Runner.java
+diff --git a/final-review/src/Multithreading/SynchronizationOnObject/Runner.java b/final-review/src/multithreading/SynchronizationUsingLocks/Runner.java
+rename from final-review/src/Multithreading/SynchronizationOnObject/Runner.java
+rename to final-review/src/multithreading/SynchronizationUsingLocks/Runner.java
+diff --git a/GSeval/GSeval.iml b/final-review/final-review-preparation.iml
+rename from GSeval/GSeval.iml
+rename to final-review/final-review-preparation.iml
