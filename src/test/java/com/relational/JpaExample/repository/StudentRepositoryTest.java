@@ -86,4 +86,10 @@ class StudentRepositoryTest {
         System.out.println("(Native named param query) Student Details: "+studentDetailsViaNativeNamedParam);
     }
 
+    @Test
+    public void updateStudentsLastNamePerEmailId() {
+        int success = studentRepository.updateStudentLastNameByEmailId("Aggrawal", "niharika@gmail.com");
+        System.out.println("update status: "+success);
+    }
+
 }
